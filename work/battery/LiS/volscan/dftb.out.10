@@ -1,0 +1,135 @@
+|===============================================================================
+|
+|  DFTB+ development version (commit: d61a5eeb, base: 22.1)
+|
+|  Copyright (C) 2006 - 2022  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 11
+
+--------------------------------------------------------------------------------
+***  Converting input from parser version  3 to parser version 11 ...
+WARNING!
+-> Keyword moved to Analysis block.
+Path: dftbplusinput/Options/MullikenAnalysis
+Line: 31-31 (File: dftb_in.hsd)
+
+WARNING!
+-> Keyword moved to Analysis block.
+Path: dftbplusinput/Options/AtomResolvedEnergies
+Line: 33-33 (File: dftb_in.hsd)
+
+WARNING!
+-> Adding legacy step size for finite difference differentiation
+Path: dftbplusinput/Hamiltonian/DFTB/Differentiation
+
+***  Done.
+
+Reading SK-files:
+../../slko/Li-Li.skf
+../../slko/Li-S.skf
+../../slko/S-S.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+WARNING!
+-> Dipole printed for extended system : value printed is not well defined
+OpenMP threads:              12
+Chosen random seed:          609473603
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-05
+Max. scc iterations:                    100
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:            16.000000
+Nr. of down electrons:          16.000000
+Periodic boundaries:         Yes
+Electronic solver:           Relatively robust
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     100
+Nr. of chrg. vec. in memory:            100
+Electronic temperature:              0.950045E-03 H      0.258520E-01 eV
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:            Li:  s, p
+                             S:  s, p, d
+K-points and weights:           1:  0.166667  0.166667  0.166667     0.074074
+                                2:  0.166667  0.166667  0.500000     0.074074
+                                3:  0.166667  0.166667  0.833333     0.074074
+                                4:  0.166667  0.500000  0.166667     0.074074
+                                5:  0.166667  0.500000  0.500000     0.074074
+                                6:  0.166667  0.500000  0.833333     0.074074
+                                7:  0.166667  0.833333  0.166667     0.074074
+                                8:  0.166667  0.833333  0.500000     0.074074
+                                9:  0.166667  0.833333  0.833333     0.074074
+                               10:  0.500000  0.166667  0.166667     0.074074
+                               11:  0.500000  0.166667  0.500000     0.074074
+                               12:  0.500000  0.166667  0.833333     0.074074
+                               13:  0.500000  0.500000  0.166667     0.074074
+                               14:  0.500000  0.500000  0.500000     0.037037
+
+K-points in absolute space:     1:  0.014014  0.014014  0.014014
+                                2:  0.014014  0.014014  0.042042
+                                3:  0.014014  0.014014  0.070069
+                                4:  0.014014  0.042042  0.014014
+                                5:  0.014014  0.042042  0.042042
+                                6:  0.014014  0.042042  0.070069
+                                7:  0.014014  0.070069  0.014014
+                                8:  0.014014  0.070069  0.042042
+                                9:  0.014014  0.070069  0.070069
+                               10:  0.042042  0.014014  0.014014
+                               11:  0.042042  0.014014  0.042042
+                               12:  0.042042  0.014014  0.070069
+                               13:  0.042042  0.042042  0.014014
+                               14:  0.042042  0.042042  0.042042
+
+Extra options:
+                             Mulliken analysis
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.26222936E+00
+    2   -0.11030576E+02   -0.11030576E+02    0.16870894E+00
+    3   -0.11033197E+02   -0.26213252E-02    0.19155439E-02
+    4   -0.11035070E+02   -0.18726591E-02    0.17699642E-04
+    5   -0.11035070E+02   -0.24432881E-06    0.14031096E-08
+>> Charges saved for restart in charges.bin
+
+Total Energy:                      -11.0350702468 H         -300.2795 eV
+Extrapolated to 0K:                -11.0350702468 H         -300.2795 eV
+Total Mermin free energy:          -11.0350702468 H         -300.2795 eV
+Force related energy:              -11.0350702468 H         -300.2795 eV
+
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Pre-SCC initialisation                 +       0.12 ( 10.4%)       0.01 (  6.6%)
+SCC                                    +       1.06 ( 89.6%)       0.18 ( 92.9%)
+--------------------------------------------------------------------------------
+Missing                                +       0.00 (  0.0%)       0.00 (  0.5%)
+Total                                  =       1.18 (100.0%)       0.20 (100.0%)
+--------------------------------------------------------------------------------

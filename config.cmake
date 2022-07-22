@@ -21,7 +21,7 @@ option(WITH_ELSI "Whether DFTB+ with MPI-parallelism should use the ELSI librari
 # Works only with MPI-parallel build. If WITH_GPU was selected above, the ELSI library must be
 # enabled (and must have been built with GPU support).
 
-option(WITH_TRANSPORT "Whether transport via libNEGF should be included." FALSE)
+option(WITH_TRANSPORT "Whether transport via libNEGF should be included." TRUE)
 # Works only when building static libraries (see option BUILD_SHARED_LIBS)
 
 option(WITH_POISSON "Whether the Poisson-solver should be included" ${WITH_TRANSPORT})
@@ -29,20 +29,20 @@ option(WITH_POISSON "Whether the Poisson-solver should be included" ${WITH_TRANS
 # if you want to use it in a non-transport build. Note, the Poisson-solver is not
 # multi-instance safe and is therefore not allowed, if WITH_API (see below) is on.
 
-option(WITH_TBLITE "Whether xTB support should be included via tblite." FALSE)
+option(WITH_TBLITE "Whether xTB support should be included via tblite." TRUE)
 
 option(WITH_SOCKETS "Whether socket communication should be allowed for" FALSE)
 
 option(WITH_ARPACK "Whether the ARPACK library should be included (needed for TD-DFTB)" FALSE)
 # Works only with non-MPI (serial) build, needed for Casida linear response
 
-option(WITH_SDFTD3 "Whether the s-dftd3 library should be included" FALSE)
+option(WITH_SDFTD3 "Whether the s-dftd3 library should be included" TRUE)
 
-option(WITH_MBD "Whether DFTB+ should be built with many-body-dispersion support" FALSE)
+option(WITH_MBD "Whether DFTB+ should be built with many-body-dispersion support" TRUE)
 
 option(WITH_PLUMED "Whether metadynamics via the PLUMED2 library should be allowed for" FALSE)
 
-option(WITH_CHIMES "Whether repulsive corrections via the ChIMES library should be enabled" FALSE)
+option(WITH_CHIMES "Whether repulsive corrections via the ChIMES library should be enabled" TRUE)
 
 option(WITH_API "Whether public API should be included and the DFTB+ library installed" TRUE)
 # Turn this on, if you want to use the DFTB+ library to integrate DFTB+ into other software
